@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3)",
+      "Bash(pip install *)",
+      "Bash(python3 -m train.train_model)",
+      "Bash(timeout 10 python3 -m uvicorn app.main:app --host 127.0.0.1 --port 8000)",
+      "Bash(curl -s http://127.0.0.1:8000/health)",
+      "Bash(kill %1)",
+      "Bash(rm -rf artifacts/*.joblib && python3 -m train.train_model)",
+      "Bash(timeout 15 python3 -m uvicorn app.main:app --host 127.0.0.1 --port 8000)",
+      "Bash(curl -s -X POST http://127.0.0.1:8000/score -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(curl -s http://127.0.0.1:8000/security-metrics)",
+      "Bash(wait)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(chmod +x start_system.sh)",
+      "Bash(awk '{print \"   \" $9 \" \\(\" $5 \"\\)\"}')",
+      "Bash(awk '{print \" \" $9 \" \\(\" $5 \"\\)\"}')",
+      "Bash(awk '{print \"   \" $9 \" \\(\" $5 \" bytes\\)\"}')",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s http://127.0.0.1:8000/monitoring/performance)",
+      "Bash(curl -s http://127.0.0.1:8000/monitoring/cache)",
+      "Bash(pkill -f \"uvicorn app.main\")",
+      "Bash(timeout 15 python3 -m uvicorn app.main:app --host 127.0.0.1 --port 9000)",
+      "Bash(curl -s -X POST http://127.0.0.1:9000/score -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(curl -s http://127.0.0.1:9000/health)",
+      "Bash(curl -s http://127.0.0.1:9000/monitoring/performance)",
+      "Bash(curl -s http://127.0.0.1:9000/monitoring/cache)",
+      "Bash(python3 -c \"from app.main import app; print\\('✅ App imports successfully'\\)\")",
+      "Bash(python3 -m pytest tests/test_validators.py -v)"
+    ],
+    "additionalDirectories": [
+      "/home/yerzhan/Desktop/diplomproject/artifacts"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+fastapi==0.115.2
+uvicorn[standard]==0.32.0
+pydantic==2.9.2
+pandas==2.2.3
+numpy<2.0
+scikit-learn==1.5.2
+joblib==1.4.2
+requests==2.32.3
+python-dotenv==1.0.1
+python-multipart==0.0.12
+shap>=0.44.0
+matplotlib>=3.8.0
+
+# LLM Options (all optional, system auto-detects)
+anthropic>=0.28.0        # Claude API (premium)
+groq>=0.4.0              # Groq API (free tier)
+# Ollama: https://ollama.ai (local, completely free, no pip install needed)
