@@ -1,0 +1,25 @@
+{
+  "dataset_size": 20000,
+  "fraud_rate": 0.012,
+  "train_size": 15000,
+  "test_size": 5000,
+  "roc_auc": 0.970858636977058,
+  "pr_auc": 0.6948023041879802,
+  "best_f1_threshold": 0.43571428571428567,
+  "best_f1": 0.7142857142857143,
+  "confusion_matrix": [
+    [
+      4937,
+      3
+    ],
+    [
+      25,
+      35
+    ]
+  ],
+  "decision_counts": {
+    "APPROVE": 4931,
+    "REVIEW": 40,
+    "DECLINE": 29
+  }
+}
